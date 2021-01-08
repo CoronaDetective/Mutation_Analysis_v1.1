@@ -21,7 +21,6 @@ for i in range (len(nc_count)):
     con_seq.append(nucleotides[np.where(position == np.amax(position))[0][0]])
 
 # write result into file
-with open("consensusSeq.txt", 'w') as outfile:
-    outfile.write(">Consensus\n")
-    outfile.write("".join(con_seq))
+with open("files/consensusSeq.txt", 'w') as outfile:
+    outfile.write("".join([str(elem) for elem in con_seq]))
         
