@@ -23,7 +23,7 @@ Specifically, the goal of the following library is to provide a simple framework
 
 The objective is to use this information to compare different primer sets (RT-PCR, RT-LAMP...) and predict which of them would work better, regarding the conservation of the targeted regions.
 
-In the "OLD" folder you could find the beta version of the library functions, when they were just Jupyter Lab scripts.
+In repository "Mutation_Analysis_v1.0" you could find the beta version of the library functions, when they were just Jupyter Lab scripts.
 
 
 
