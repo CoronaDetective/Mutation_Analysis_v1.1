@@ -51,7 +51,7 @@ Sketch for now. More details on https://miro.com/app/board/o9J_le5Y2xc=/
 
 
 
-- <b>degeneratedNucleotides</b> Counting other nucleotides other tha A/T/G/C/- ?
+- <b>degeneratedNucleotides</b> Counting other nucleotides other than A/T/G/C/- 
 
 - <b>f_align</b> Location of the .aln file **in Clustal format**. For example, output of MAFFT online tool (https://mafft.cbrc.jp/alignment/software/closelyrelatedviralgenomes.html). 
 
@@ -65,7 +65,7 @@ Sketch for now. More details on https://miro.com/app/board/o9J_le5Y2xc=/
 
 
 
-- <b>countGaps</b> Counting "-" for computing deviation?
+- <b>countGaps</b> Counting "-" for computing deviation
 - <b>f_count</b> Location of the AlignmentParser fuction output.
 
 - <b>f_out</b> Output location. The output will be a two columns file, one with the nucleotide position and the other with number of sequences that vary from the consensus.
@@ -79,9 +79,9 @@ Sketch for now. More details on https://miro.com/app/board/o9J_le5Y2xc=/
 
 
 
-- **INCLUDE_GAPS** Making the consensus sequence with gaps included? 
+- **INCLUDE_GAPS** Includes gaps into consensus sequence 
 
-- **f_count** Location of the AlignmentParser fuction output.
+- **f_count** Location of the AlignmentParser function output.
 
 - **f_out**  Output location. The output file "consensusSeq.txt" have the FASTA of the consensus sequence.
 
