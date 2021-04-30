@@ -196,7 +196,6 @@ def DeviationCalc (countGaps = True, f_count="nc_count.txt", f_out="Variation.tx
 
             line = line.split('\t')
             line = line[1:6]
-
             for i in range(0,g):
 
                 if float(line[i]) > b:
@@ -293,7 +292,7 @@ class sequences:
         }
 
         
-def PrimerTest (f_consensus="consensusSeq.txt",f_primers="primers.txt",f_variation="Variation.txt",f_count="nc_count.txt", ranges=[50,500,2500], mutation_threshold=50, f_name = int(round(time.time() * 1000))):
+def PrimerTest (f_consensus="consensusSeq.txt",f_primers="primers.txt",f_variation="Variation.txt",f_count="nc_count.txt", f_name = int(round(time.time() * 1000)), ranges=[50,500,2500], mutation_threshold=50):
     
     consensus = []
     range_variation = []
@@ -337,6 +336,7 @@ def PrimerTest (f_consensus="consensusSeq.txt",f_primers="primers.txt",f_variati
                         print("----------" + primersIO.id + "----------")
                         print(format_alignment(*alignments[0]))
                         p_start.seq["F3"] = alignments[0][3]
+#                         print(p_start.seq["F3"])
                         primers_fragments.seq["F3"] = format_alignment(*alignments[0]).split(" ")[1].split("\n")[0]
 
                     elif "B3" in primersIO.id:
@@ -387,7 +387,9 @@ def PrimerTest (f_consensus="consensusSeq.txt",f_primers="primers.txt",f_variati
                         print(format_alignment(*alignments[0]))
                         buff = format_alignment(*alignments[0]).split(" ")
                         p_start.seq["rFIP"] = alignments[0][3]
+#                         print(p_start.seq["rFIP"])
                         primers_fragments.seq["rFIP"] = buff[1].split("\n")[0]
+#                         print(p_start.seq["rFIP"] + len(primers_fragments.seq["rFIP"]))
 
 
                     elif "BIP" in primersIO.id:
@@ -479,8 +481,7 @@ def PrimerTest (f_consensus="consensusSeq.txt",f_primers="primers.txt",f_variati
                     elif i > (p_start.seq["rFIP"]-p_start.seq["F3"]) and i < ((p_start.seq["rFIP"]-p_start.seq["F3"]) + len(str(primers_fragments.seq["rFIP"]))): 
                         i_plocation.append(0.3)
                         nucleotide_index = (p_start.seq["rFIP"]-p_start.seq["F3"]) + len(primers_fragments.seq["rFIP"]) - i
-                        if nucleotide_index > len(primers_fragments.seq["rBIP"]):
-                            ComputeMutation("rFIP", nucleotide_index, i,n,m_t,mutated_nt,output_s,nucleotide_count)
+                        ComputeMutation("rFIP", nucleotide_index, i,n,m_t,mutated_nt,output_s,nucleotide_count)
 
                     elif i > (p_start.seq["rBIP"]-p_start.seq["F3"]) and i < ((p_start.seq["rBIP"]-p_start.seq["F3"]) + len(str(primers_fragments.seq["rBIP"]))): 
                         i_plocation.append(0.6)
