@@ -2,4 +2,8 @@ The example files are based in an analysis conducted with the NCBI nCov *Europea
 
 
 
+The .rar files must be extracted.
+
+
+
 The primers are the CoronaDetective original primers.
