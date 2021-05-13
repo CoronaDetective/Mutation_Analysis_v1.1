@@ -1,9 +1,8 @@
-The example files are based in an analysis conducted with the NCBI nCov *European complete* sequences collected from the 31 of Janury, 2021 to the 12 May 2021.
+Corona Detective N target primers in this example are analysed for a '*European complete* sequences' data set from NCBI nCov database for 31 January 2021 to 12 May 2021.
 
 
 
-The .rar files must be extracted.
+The .rar files contains the .aln and FASTA files and must be extracted.
 
 
 
-The primers are the CoronaDetective original primers.
